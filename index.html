@@ -487,6 +487,7 @@
 
     // ---------- UNIT 1 BÀI 1 ---------- (Giữ nguyên dữ liệu từ E4_U1_B1)
 
+
 var E6_U1_B1 = {
 P1: [ // trắc nghiệm trả lời câu hỏi
 { id: 1, word: "Where is Sunrise boarding school?", correct: "in Sydney", wrong1: "in Bac Giang", wrong2: "in London" },
@@ -13220,6 +13221,10 @@ P5: [
 ]
 };
 
+
+
+
+
     // ---------- UNIT 2 đến UNIT 12, mỗi unit 20 bài rỗng ----------
     (function createEmptyLessons() {
         for (let unit = 2; unit <= 12; unit++) {
@@ -13357,7 +13362,7 @@ P5: [
             utterance.onend = () => {
                 index++;
                 if (index < audioQueue.length && !isPaused) {
-                    audioTimeout = setTimeout(playNext, gapSec * 1000);
+                    audioTimeout = setTimeout(playNext, gapSec * 500);
                 } else if (index >= audioQueue.length) {
                     stopAllAudio();
                 }
@@ -13365,7 +13370,7 @@ P5: [
             utterance.onerror = () => {
                 index++;
                 if (index < audioQueue.length && !isPaused) {
-                    audioTimeout = setTimeout(playNext, gapSec * 1000);
+                    audioTimeout = setTimeout(playNext, gapSec * 500);
                 }
             };
             speechSynthesis.speak(utterance);
@@ -13638,6 +13643,10 @@ P5: [
                         <option value="4">4s</option>
                         <option value="5">5s</option>
                         <option value="6">6s</option>
+                        <option value="7">7s</option>
+                        <option value="8">8s</option>
+                        <option value="9">9s</option>
+                        <option value="10">10s</option>
                     </select>
                     <select id="loopCountSelect">
                         <option value="1" selected>1 lần</option>
